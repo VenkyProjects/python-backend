@@ -9,7 +9,7 @@ def create_account_api(request):
     }
     data=loginTable.select().where(
         loginTable.user_name==request.get('user_name'),
-        loginTable.password==request.get('password')
+        # loginTable.password==request.get('password')
     ).first()
     
     if not data:
